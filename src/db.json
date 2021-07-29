@@ -1,10 +1,40 @@
 {
   "posts": [
     {
-      "title": "test",
-      "body": "123",
+      "title": "New post about sport",
+      "body": "Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку",
       "genre": "Sport",
       "id": 1
+    },
+    {
+      "title": "Abcde",
+      "body": "      alert('successfully created genre!');\n         event.target.reset();",
+      "genre": "Programming",
+      "id": 2
+    },
+    {
+      "title": "123123",
+      "body": "213123",
+      "genre": "",
+      "id": 3
+    },
+    {
+      "title": "test",
+      "body": "test",
+      "genre": "Sport",
+      "id": 4
+    },
+    {
+      "title": "213213",
+      "body": "213213",
+      "genre": "Programming",
+      "id": 5
+    },
+    {
+      "title": "213213",
+      "body": "sadsadsad",
+      "genre": "Programming",
+      "id": 6
     }
   ],
   "genres": [

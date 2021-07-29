@@ -17,6 +17,7 @@ export const CreatePost = () => {
    const { register, handleSubmit } = useForm<Inputs>();
    const onSubmit: SubmitHandler<Inputs> = async (data, event?: any) => {
       try {
+         if (activeOption) data.genre = activeOption;
          await postApi.create(data);
          alert('successfully created post!');
          event.target.reset();
@@ -40,7 +41,6 @@ export const CreatePost = () => {
       <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
          <input type="text" placeholder="Title" required {...register('title')} />
          <textarea placeholder="Body" required {...register('body')} />
-         {activeOption ? <input type="hidden" value={activeOption} {...register('genre')} /> : undefined}
          {genres.length ? (
             <Dropdown activeOption={activeOption} setActiveOption={setActiveOption} options={genres} placeHolder="Select genre" />
          ) : undefined}
