@@ -74,6 +74,59 @@
       "title": "",
       "body": "",
       "id": 15
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 16
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 17
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 18
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 19
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 20
+    },
+    {
+      "title": "",
+      "genre": "",
+      "body": "",
+      "id": 21
+    },
+    {
+      "title": "ggg",
+      "genre": "",
+      "body": "ggg",
+      "id": 22
+    },
+    {
+      "title": "",
+      "genre": "",
+      "body": "",
+      "id": 23
+    }
+  ],
+  "genres": [
+    {
+      "name": "khk",
+      "id": 1
+    },
+    {
+      "name": "Film",
+      "id": 2
     }
   ]
 }
