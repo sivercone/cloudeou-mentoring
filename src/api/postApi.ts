@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { create } from 'domain';
 import { PostInterface } from '../interfaces';
 
 export const postApi = {

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const options = ['Post', 'Genre'];
-
 interface Props {
    activeOption: string | undefined;
    setactiveOption: React.Dispatch<React.SetStateAction<string | undefined>>;
+   options: string[];
+   placeHolder: string;
 }
 
-export const Dropdown: React.FC<Props> = ({ activeOption, setactiveOption }) => {
+export const Dropdown: React.FC<Props> = ({ activeOption, setactiveOption, options, placeHolder }) => {
    const [visibleDropdown, setVisibleDropdown] = React.useState<boolean>(false);
    const toggleVisibleDropdown = () => setVisibleDropdown(!visibleDropdown);
 
@@ -28,7 +28,7 @@ export const Dropdown: React.FC<Props> = ({ activeOption, setactiveOption }) => 
    return (
       <div ref={dropdownRef}>
          <button onClick={toggleVisibleDropdown}>
-            <span>{activeOption ? `Selected: ${activeOption}` : 'Select what you want to create'}</span>
+            <span>{activeOption ? `Selected: ${activeOption}` : placeHolder}</span>
          </button>
          {visibleDropdown ? (
             <ul>
