@@ -9,4 +9,8 @@ export const postApi = {
    async create(payload: PostInterface): Promise<void> {
       return await axios.post('/posts', payload);
    },
+
+   async delete(payload: PostInterface): Promise<void> {
+      return await axios.delete(`/posts/${payload.id}`);
+   },
 };
