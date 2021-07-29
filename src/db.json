@@ -1,132 +1,30 @@
 {
   "posts": [
     {
-      "title": "213",
-      "body": "123",
+      "title": "New post about sport",
+      "body": "Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н. э. на латинском языке, обнаружение сходства приписывается Ричарду МакКлинтоку",
+      "genre": "Sport",
       "id": 1
     },
     {
-      "title": "",
-      "body": "",
+      "title": "Abcde",
+      "body": "      alert('successfully created genre!');\n         event.target.reset();",
+      "genre": "Programming",
       "id": 2
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 3
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 4
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 5
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 6
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 7
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 8
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 9
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 10
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 11
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 12
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 13
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 14
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 15
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 16
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 17
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 18
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 19
-    },
-    {
-      "title": "",
-      "body": "",
-      "id": 20
-    },
-    {
-      "title": "",
-      "genre": "",
-      "body": "",
-      "id": 21
-    },
-    {
-      "title": "ggg",
-      "genre": "",
-      "body": "ggg",
-      "id": 22
-    },
-    {
-      "title": "",
-      "genre": "",
-      "body": "",
-      "id": 23
     }
   ],
   "genres": [
     {
-      "name": "khk",
+      "name": "Sport",
       "id": 1
     },
     {
-      "name": "Film",
+      "name": "Programming",
       "id": 2
+    },
+    {
+      "name": "Media",
+      "id": 3
     }
   ]
 }

@@ -1,18 +1,21 @@
 import React from 'react';
+import s from './Dropdown.module.scss';
 
 interface Props {
    activeOption: string | undefined;
-   setactiveOption: React.Dispatch<React.SetStateAction<string | undefined>>;
+   setActiveOption: React.Dispatch<React.SetStateAction<string | undefined>>;
    options: string[];
    placeHolder: string;
 }
 
-export const Dropdown: React.FC<Props> = ({ activeOption, setactiveOption, options, placeHolder }) => {
+export const Dropdown: React.FC<Props> = ({ activeOption, setActiveOption, options, placeHolder }) => {
+   const dropdownOptions = React.useMemo(() => options, [options]);
+
    const [visibleDropdown, setVisibleDropdown] = React.useState<boolean>(false);
    const toggleVisibleDropdown = () => setVisibleDropdown(!visibleDropdown);
 
    const setOption = (payload: string) => {
-      setactiveOption(payload);
+      setActiveOption(payload);
       toggleVisibleDropdown();
    };
 
@@ -23,17 +26,21 @@ export const Dropdown: React.FC<Props> = ({ activeOption, setactiveOption, optio
    };
    React.useEffect(() => {
       document.body.addEventListener('click', nonDropdownClick);
-   });
+      return () => document.body.removeEventListener('click', nonDropdownClick);
+   }, []);
 
    return (
-      <div ref={dropdownRef}>
-         <button onClick={toggleVisibleDropdown}>
+      <div ref={dropdownRef} className={s.dropdown}>
+         <button onClick={toggleVisibleDropdown} type="button">
             <span>{activeOption ? `Selected: ${activeOption}` : placeHolder}</span>
          </button>
          {visibleDropdown ? (
-            <ul>
-               {options.map((name, index) => (
-                  <li onClick={() => setOption(name)} key={name + index}>
+            <ul className={s.dropdown__list}>
+               {dropdownOptions.map((name, index) => (
+                  <li
+                     onClick={() => setOption(name)}
+                     key={name + index}
+                     style={activeOption === name ? { border: '1px solid #000' } : undefined}>
                      {name}
                   </li>
                ))}

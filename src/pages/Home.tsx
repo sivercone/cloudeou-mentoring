@@ -14,5 +14,12 @@ export const Home: React.FC = () => {
       getPosts();
    }, []);
 
-   return <div>{posts ? posts.map((content) => <Post key={content.id} content={content} />) : undefined}</div>;
+   return (
+      <>
+         <div style={{ textAlign: 'center', margin: '2rem 0' }}>
+            <h1>Home Page</h1>
+         </div>
+         {posts ? posts.map((content) => <Post key={content.id} content={content} />) : undefined}
+      </>
+   );
 };

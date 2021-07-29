@@ -5,13 +5,15 @@ import { Home } from './pages/Home';
 
 const App: React.FC = () => {
    return (
-      <div className="container">
+      <>
          <Header />
-         <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/create" component={Create} exact />
-         </Switch>
-      </div>
+         <div className="container">
+            <Switch>
+               <Route path="/" component={Home} exact />
+               <Route path="/create" component={Create} exact />
+            </Switch>
+         </div>
+      </>
    );
 };
 

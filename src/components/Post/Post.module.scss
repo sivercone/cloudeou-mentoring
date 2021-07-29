@@ -1,0 +1,25 @@
+.post {
+   display: block;
+   padding: 1rem;
+   margin: 1rem;
+   border-radius: 10px;
+   background-color: #fff;
+   box-shadow: 4px 4px 0px 1px #dfdfdf;
+
+   &:hover {
+      box-shadow: 4px 4px 0px 1px #c395ff;
+
+      h2 {
+         color: #c395ff;
+      }
+   }
+
+   &__date {
+      margin: 10px 0;
+      color: #666;
+   }
+
+   &__genre {
+      font-weight: 600;
+   }
+}
