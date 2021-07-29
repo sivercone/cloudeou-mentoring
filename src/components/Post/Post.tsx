@@ -6,6 +6,9 @@ export const Post: React.FC<{ content: PostInterface }> = ({ content }) => {
    return (
       <div className={s.post}>
          <h2>{content.title}</h2>
+         <p>
+            <b>{content.genre}</b>
+         </p>
          <p>{content.body}</p>
       </div>
    );
