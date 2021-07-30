@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import {postApi} from "../../api/postApi";
 
 type Inputs = {
+    id: number;
     title: string;
     genre: string;
     body: string;
@@ -27,6 +28,7 @@ export const EditPost: React.FC<{ content: PostInterface}> = ({ content }) => {
 
     const { register, handleSubmit } = useForm<Inputs>({
         defaultValues: {
+            id: content.id,
             title: content.title,
             genre: content.genre,
             body: content.body,
@@ -34,7 +36,6 @@ export const EditPost: React.FC<{ content: PostInterface}> = ({ content }) => {
     });
     const onSubmit: SubmitHandler<Inputs> = async (data, event?: any) => {
         try {
-            console.log(data)
             await postApi.edit(data);
             alert('successfully created post!');
             event.target.reset();

@@ -14,9 +14,9 @@
     },
     {
       "title": "test",
-      "body": "test",
-      "genre": "Sport",
-      "id": 4
+      "body": "testfffff",
+      "id": 4,
+      "genre": "Sport"
     }
   ],
   "genres": [

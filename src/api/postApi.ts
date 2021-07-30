@@ -15,7 +15,6 @@ export const postApi = {
    },
 
    async edit(payload: PostInterface): Promise<void> {
-      console.log(`/posts/${payload.id}`)
       return await axios.put(`/posts/${payload.id}`, payload);
    },
 };
