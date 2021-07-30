@@ -1,25 +1,23 @@
 import React from 'react';
-import { postApi } from '../api/postApi';
+import { useDispatch, useSelector } from 'react-redux';
 import { Post } from '../components/Post/Post';
 import { PostInterface } from '../interfaces';
+import { fetchPosts } from '../store/Posts/actionCreator';
 
 export const Home: React.FC = () => {
-   const [posts, setPosts] = React.useState<PostInterface[]>([]);
+   const dispatch = useDispatch();
+   const posts: PostInterface[] = useSelector(({ posts }: any) => posts.items);
 
-   const getPosts = async () => {
-      const data = await postApi.get();
-      if (data) setPosts(data);
-   };
    React.useEffect(() => {
-      getPosts()
-   }, []);
+      dispatch(fetchPosts());
+   }, [dispatch]);
 
    return (
       <>
          <div style={{ textAlign: 'center', margin: '2rem 0' }}>
             <h1>Home Page</h1>
          </div>
-         {posts ? posts.map((content) => <Post key={content.id} getPost={getPosts} content={content} />) : undefined}
+         {posts ? posts.map((content) => <Post key={content.id} content={content} />) : undefined}
       </>
    );
 };
