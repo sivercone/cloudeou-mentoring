@@ -1,8 +1,8 @@
 export interface PostInterface {
    id?: number;
    title: string;
-   body: string;
    genre: string;
+   body: string;
 }
 export interface GenreInterface {
    id?: number;
