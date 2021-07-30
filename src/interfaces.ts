@@ -3,7 +3,6 @@ export interface PostInterface {
    title: string;
    genre: string;
    body: string;
-   genre: string;
 }
 export interface GenreInterface {
    id?: number;
