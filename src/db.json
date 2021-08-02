@@ -1,5 +1,30 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "new post",
+      "body": "post body",
+      "genre": "Sport",
+      "id": 1
+    },
+    {
+      "title": "post",
+      "body": "this is post",
+      "genre": "Media",
+      "id": 2
+    },
+    {
+      "title": "post",
+      "body": "post about something",
+      "id": 4,
+      "genre": "Programming"
+    },
+    {
+      "title": "ljnhk",
+      "body": "gggg",
+      "genre": "Economy",
+      "id": 5
+    }
+  ],
   "genres": [
     {
       "name": "Sport",
@@ -12,6 +37,22 @@
     {
       "name": "Media",
       "id": 3
+    },
+    {
+      "name": "Fiction",
+      "id": 4
+    },
+    {
+      "name": "Science",
+      "id": 5
+    },
+    {
+      "name": "Economy",
+      "id": 6
+    },
+    {
+      "name": "Weather",
+      "id": 7
     }
   ]
 }
