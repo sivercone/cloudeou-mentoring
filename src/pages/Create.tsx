@@ -2,8 +2,9 @@ import React from 'react';
 import { Dropdown } from '../components/Dropdown/Dropdown';
 import { CreatePost } from '../components/Create/CreatePost';
 import { CreateGenre } from '../components/Create/CreateGenre';
+import AuthCheck from '../components/AuthCheck';
 
-export const Create = () => {
+const Create = () => {
    const [activeOption, setactiveOption] = React.useState<string>();
 
    return (
@@ -21,3 +22,5 @@ export const Create = () => {
       </>
    );
 };
+
+export const WrappedCreate = AuthCheck(Create);

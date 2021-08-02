@@ -1,8 +1,10 @@
+import { postActions } from './actionCreator';
+
 const initialState = {
    items: [],
 };
 
-export const postsReducer = (state = initialState, action: any) => {
+export const postsReducer = (state = initialState, action: postActions) => {
    switch (action.type) {
       case 'POSTS/SET':
          return {
@@ -10,17 +12,17 @@ export const postsReducer = (state = initialState, action: any) => {
             items: action.payload,
          };
 
-         case 'POSTS/ADD':
-         return {
-            ...state,
-            items: [...state.items, action.payload],
-         };
+      // case 'POSTS/ADD':
+      //    return {
+      //       ...state,
+      //       items: [...state.items, action.payload],
+      //    };
 
-         case 'POSTS/PUT':
-         return {
-            ...state,
-            items: [...state.items, action.payload],
-         };
+      // case 'POSTS/PUT':
+      //    return {
+      //       ...state,
+      //       items: [...state.items, action.payload],
+      //    };
 
       default:
          return state;

@@ -1,7 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header/Header';
-import { Create } from './pages/Create';
-import { Home } from './pages/Home';
+import { Auth } from './pages/Auth';
+import { WrappedCreate } from './pages/Create';
+import { WrappedHome } from './pages/Home';
 
 const App: React.FC = () => {
    return (
@@ -9,8 +10,9 @@ const App: React.FC = () => {
          <Header />
          <div className="container">
             <Switch>
-               <Route path="/" component={Home} exact />
-               <Route path="/create" component={Create} exact />
+               <Route path="/" component={WrappedHome} exact />
+               <Route path="/create" component={WrappedCreate} exact />
+               <Route path="/auth" component={Auth} exact />
             </Switch>
          </div>
       </>

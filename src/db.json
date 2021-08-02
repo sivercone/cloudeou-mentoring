@@ -23,6 +23,12 @@
       "body": "gggg",
       "genre": "Economy",
       "id": 5
+    },
+    {
+      "title": "444",
+      "body": "444",
+      "genre": "Programming",
+      "id": 6
     }
   ],
   "genres": [
@@ -53,6 +59,14 @@
     {
       "name": "Weather",
       "id": 7
+    },
+    {
+      "name": "5555",
+      "id": 8
+    },
+    {
+      "name": "321231",
+      "id": 9
     }
   ]
 }

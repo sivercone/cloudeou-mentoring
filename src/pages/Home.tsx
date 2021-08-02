@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import AuthCheck from '../components/AuthCheck';
 import { Post } from '../components/Post/Post';
 import { PostInterface } from '../interfaces';
 import { fetchPosts } from '../store/Posts/actionCreator';
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
    const dispatch = useDispatch();
    const posts: PostInterface[] = useSelector(({ posts }: any) => posts.items);
 
    useEffect(() => {
       dispatch(fetchPosts());
    }, [dispatch]);
-
 
    return (
       <>
@@ -22,3 +22,5 @@ export const Home: React.FC = () => {
       </>
    );
 };
+
+export const WrappedHome = AuthCheck(Home);
