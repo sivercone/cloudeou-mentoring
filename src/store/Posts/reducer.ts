@@ -1,7 +1,8 @@
+import { PostInterface } from '../../interfaces';
 import { postActions } from './actionCreator';
 
 const initialState = {
-   items: [],
+   items: [] as PostInterface[],
 };
 
 export const postsReducer = (state = initialState, action: postActions) => {
@@ -12,13 +13,21 @@ export const postsReducer = (state = initialState, action: postActions) => {
             items: action.payload,
          };
 
-      // case 'POSTS/ADD':
-      //    return {
-      //       ...state,
-      //       items: [...state.items, action.payload],
-      //    };
+      case 'POSTS/DELETE':
+         return {
+            ...state,
+            items: state.items.filter((item) => item.id !== action.payload.id),
+         };
 
-      // case 'POSTS/PUT':
+      case 'POSTS/PUT': {
+         const itemsWithoutPrev = state.items.filter((item) => item.id !== action.payload.id);
+         return {
+            ...state,
+            items: [...itemsWithoutPrev, action.payload],
+         };
+      }
+
+      // case 'POSTS/ADD':
       //    return {
       //       ...state,
       //       items: [...state.items, action.payload],

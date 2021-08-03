@@ -5,7 +5,7 @@ import s from './Form.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { createPosts } from '../../store/Posts/actionCreator';
 import { fetchGenres } from '../../store/Genres/actionCreator';
-import { GenreInterface } from "../../interfaces";
+import { RootState } from '../../store/store';
 
 type Inputs = {
    title: string;
@@ -18,19 +18,14 @@ export const CreatePost = () => {
    const dispatch = useDispatch();
 
    const { register, handleSubmit } = useForm<Inputs>();
-   const onSubmit: SubmitHandler<Inputs> = async (data, event?: any) => {
-      try {
-         if (activeOption) data.genre = activeOption;
-         dispatch(createPosts(data))
-         alert('successfully created post!');
-         event.target.reset();
-      } catch (error) {
-         alert(error);
-      }
+   const onSubmit: SubmitHandler<Inputs> = (data, event?: any) => {
+      if (activeOption) data.genre = activeOption;
+      dispatch(createPosts(data));
+      alert('successfully created post!');
+      event.target.reset();
    };
 
-   const genres: GenreInterface[] = useSelector(({ genres }: any) => genres.items);
-   console.log(genres)
+   const genres = useSelector(({ genres }: RootState) => genres.items);
 
    useEffect(() => {
       dispatch(fetchGenres());
@@ -41,7 +36,12 @@ export const CreatePost = () => {
          <input type="text" placeholder="Title" required {...register('title')} />
          <textarea placeholder="Body" required {...register('body')} />
          {genres.length ? (
-            <Dropdown activeOption={activeOption} setActiveOption={setActiveOption} options={genres.map(genre => genre.name)} placeHolder="Select genre" />
+            <Dropdown
+               activeOption={activeOption}
+               setActiveOption={setActiveOption}
+               options={genres.map((genre) => genre.name)}
+               placeHolder="Select genre"
+            />
          ) : undefined}
          <button type="submit">Create post</button>
       </form>

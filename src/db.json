@@ -1,34 +1,16 @@
 {
   "posts": [
     {
-      "title": "new post",
-      "body": "post body",
-      "genre": "Sport",
-      "id": 1
+      "title": "213213",
+      "body": "123123",
+      "id": 2,
+      "genre": "Media"
     },
     {
-      "title": "post",
-      "body": "this is post",
-      "genre": "Media",
-      "id": 2
-    },
-    {
-      "title": "post",
-      "body": "post about something",
-      "id": 4,
-      "genre": "Programming"
-    },
-    {
-      "title": "ljnhk",
-      "body": "gggg",
-      "genre": "Economy",
-      "id": 5
-    },
-    {
-      "title": "444",
-      "body": "444",
-      "genre": "Programming",
-      "id": 6
+      "title": "аааа",
+      "body": "аааа",
+      "genre": "Science",
+      "id": 3
     }
   ],
   "genres": [

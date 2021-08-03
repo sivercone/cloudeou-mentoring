@@ -1,7 +1,8 @@
+import { GenreInterface } from '../../interfaces';
 import { genreActions } from './actionCreator';
 
 const initialState = {
-   items: [],
+   items: [] as GenreInterface[],
 };
 
 export const genresReducer = (state = initialState, action: genreActions) => {

@@ -12,14 +12,10 @@ export const CreateGenre = () => {
 
    const dispatch = useDispatch();
 
-   const onSubmit = async (data: Inputs, event?: any) => {
-      try {
-         dispatch(createGenres(data))
-         alert('successfully created genre!');
-         event.target.reset();
-      } catch (error) {
-         alert(error);
-      }
+   const onSubmit = (data: Inputs, event?: any) => {
+      dispatch(createGenres(data));
+      alert('successfully created genre!');
+      event.target.reset();
    };
 
    return (

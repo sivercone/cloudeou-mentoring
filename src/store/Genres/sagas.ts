@@ -1,10 +1,11 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { genreApi } from '../../api/genreApi';
+import { GenreInterface } from '../../interfaces';
 import { setGenres } from './actionCreator';
-import { createGenresInterface, fetchGenresInterface } from './actionTypes';
+import { createGenresInterface } from './actionTypes';
 
-export function* fetchGenresRequest(): any {
-   const data = yield call(genreApi.get);
+export function* fetchGenresRequest() {
+   const data: GenreInterface[] = yield call(genreApi.get);
    yield put(setGenres(data));
 }
 

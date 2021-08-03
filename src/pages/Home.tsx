@@ -4,10 +4,11 @@ import AuthCheck from '../components/AuthCheck';
 import { Post } from '../components/Post/Post';
 import { PostInterface } from '../interfaces';
 import { fetchPosts } from '../store/Posts/actionCreator';
+import { RootState } from '../store/store';
 
 const Home: React.FC = () => {
    const dispatch = useDispatch();
-   const posts: PostInterface[] = useSelector(({ posts }: any) => posts.items);
+   const posts: PostInterface[] = useSelector(({ posts }: RootState) => posts.items);
 
    useEffect(() => {
       dispatch(fetchPosts());
